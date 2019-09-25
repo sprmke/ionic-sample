@@ -1,0 +1,78 @@
+// Tablet and large devices
+@media screen and (min-width: 500px) {
+    html {
+        font-size: 12px;
+    }
+    ion-navbar {
+        padding: 1.25rem 4px !important;
+    }
+}
+@media screen and (min-width: 768px) {
+    html {
+        font-size: 12px;
+    }
+    ion-card,
+    .page-title-container,
+    .segment-container {
+        width: 85% !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+    ion-card ion-card {
+        width: 95% !important;
+    }
+    page-financial {
+        ion-grid:not(.financial-cards) {
+            width: 85%;
+        }
+    }
+    page-levies {
+        app-levy-total-info {
+            ion-grid {
+                width: 85% !important;
+
+                .lb-left,
+                .lb-right {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    border-radius: 0 !important;
+                }
+                .lb-center {
+                    padding: 1.5rem 2rem !important;
+                }
+            }
+        }
+        app-levy-info {
+            table tr {
+                width: 100% !important;
+            }
+            table thead tr td:nth-child(2), 
+            table tbody tr td:nth-child(2) {
+                width: 60% !important;
+            }
+            .levy-lot-footer {
+                width: 80% !important;
+                margin-left: auto !important;
+                margin-right: auto !important;
+                flex-flow: column nowrap !important;
+            }
+        }
+    }
+    page-open-items {
+        ion-searchbar {
+            width: 95% !important;
+            padding: 0 !important;
+            margin-left: auto !important;
+            margin-right: auto !important;
+        }
+    }
+    page-faqs {
+        ion-searchbar {
+            width: 85% !important;
+            padding: 0 !important;
+            margin-left: auto !important;
+            margin-right: auto !important;
+        }
+    }
+}

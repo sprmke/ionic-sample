@@ -1,0 +1,30 @@
+<app-navbar [activePage]="'Meetings'"></app-navbar>
+
+<ion-content>
+    <ion-card class="calendar-container mt-4 d-flex justify-content-center align-items-center">
+        <img src="assets/imgs/calendar.png" alt="">
+    </ion-card>
+    
+    <div class="segment-container mt-2 mb-4">
+        <ion-segment [(ngModel)]="meetingsSegment">
+            <ion-segment-button class="btn" value="upcoming-meetings">
+                <span class="button-inner">Upcoming</span>
+            </ion-segment-button>
+            <ion-segment-button class="btn" value="previous-meetings">
+                <span class="button-inner">Previous</span>
+            </ion-segment-button>
+        </ion-segment>
+    </div>
+
+    <div class="segment-content" [ngSwitch]="meetingsSegment">
+        <div class="newsfeed-segment" *ngSwitchCase="'upcoming-meetings'">
+            <app-upcoming-meetings></app-upcoming-meetings>
+            <app-upcoming-meetings></app-upcoming-meetings>
+            <app-upcoming-meetings></app-upcoming-meetings>
+        </div>
+        <div class="newsfeed-segment" *ngSwitchCase="'previous-meetings'">
+            <app-previous-meetings></app-previous-meetings>
+            <app-previous-meetings></app-previous-meetings>
+        </div>
+    </div>
+</ion-content>

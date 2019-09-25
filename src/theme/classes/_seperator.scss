@@ -1,0 +1,36 @@
+// Seperator sides
+$sides: left, top, right, bottom, x, y;
+
+// Seperator line colors
+$card-l-color: #eaeaea;
+$page-l-color: #d6d6d6;
+
+// Card and page line seperator
+@each $side in $sides {
+    @if $side == x {
+        ._card-line-x {
+            border-left: 1px solid $card-l-color;
+            border-right: 1px solid $card-l-color;
+        }
+        .page-line-x {
+            border-left: 1px solid $card-l-color;
+            border-right: 1px solid $page-l-color;
+        }
+    } @else if $side == y {
+        ._card-line-y {
+            border-top: 1px solid $card-l-color;
+            border-bottom: 1px solid $card-l-color;
+        }
+        ._page-line-y {
+            border-top: 1px solid $card-l-color;
+            border-bottom: 1px solid $page-l-color;
+        }
+    } @else {
+        ._card-line-#{$side} {
+            border-#{$side}: 1px solid $card-l-color;
+        }
+        ._page-line-#{$side} {
+            border-#{$side}: 1px solid $page-l-color;
+        }
+    }
+}

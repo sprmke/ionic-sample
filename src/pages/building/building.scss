@@ -1,0 +1,92 @@
+page-building {
+    ion-navbar {
+        .toolbar-title {
+            opacity: 0;
+            transition: opacity 0.1s ease-in-out;
+        }
+        .toolbar-background {
+            background-color: transparent !important;
+        }
+    }
+    .building-navbar.colored ion-navbar {
+        .toolbar-title {
+            opacity: 1;
+        }
+    }
+    ion-slides.header-image {
+        height: 235px;
+        background: #96a0af;
+
+        @media screen and (min-width: 500px) {
+            min-height: 235px;
+            height: 35vh;
+        }
+
+        ion-slide {
+            .slide-zoom {
+                height: 100%;
+
+                img {
+                    height: 100%;
+                    max-width: 100%;
+
+                }
+            }
+            
+        }
+        .swiper-pagination {
+            bottom: 40px !important;
+
+            .swiper-pagination-bullet {
+                background: #fff !important;
+                opacity: 0.5 !important;
+            }
+            .swiper-pagination-bullet-active {
+                background: #007aff !important;
+                opacity: 1 !important;
+            }
+        }
+    }
+    ion-content {
+        background: #e2e7ef !important;
+    }
+    .main-content {
+        position: relative;
+        width: 100%;
+        padding: 2rem 0;
+        background: #e2e7ef !important;
+        z-index: 1;
+
+        .building-name {
+            background: rgba(54, 138, 255, 0.9);
+            position: absolute;
+            top: -3rem;
+            left: 0;
+            right: 0;
+            width: 75%;
+            margin: 0 auto;
+            text-align: center;
+            border-radius: 5px;
+            opacity: 1;
+            transition: opacity 0.1s ease-in-out;
+
+            &.hide {
+                opacity: 0;
+            }
+
+            h3 {
+                color: #fff !important;
+            }
+        }
+        .segment-content {
+            .strata-content {
+                ion-card {
+                    padding: 1.5rem 1.5rem 0.5rem 1.5rem !important;
+                }
+                .hotdog {
+                    border-radius: 10px;
+                }
+            }
+        }
+    }
+}

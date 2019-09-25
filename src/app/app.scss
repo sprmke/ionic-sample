@@ -1,0 +1,45 @@
+// http://ionicframework.com/docs/theming/
+
+
+// App Global Sass
+// --------------------------------------------------
+// Put style rules here that you want to apply globally. These
+// styles are for the entire app and not just one component.
+// Additionally, this file can be also used as an entry point
+// to import other Sass files to be included in the output CSS.
+//
+// Shared Sass variables, which can be used to adjust Ionic's
+// default Sass variables, belong in "theme/variables.scss".
+//
+// To declare rules for a specific mode, create a child rule
+// for the .md, .ios, or .wp mode classes. The mode class is
+// automatically applied to the <body> element in the app.
+
+
+// Imports ----------------------------------------------------------------------------------------------------
+
+// Custom classes
+@import '../theme/classes/global';
+@import '../theme/classes/flexbox';
+@import '../theme/classes/seperator';
+@import '../theme/classes/sizing';
+@import '../theme/classes/spacing';
+
+// Layout
+@import '../theme/layout/shapes';
+
+// Base
+@import '../theme/base/global';
+@import '../theme/base/component';
+@import '../theme/base/typography';
+@import '../theme/base/buttons';
+@import '../theme/base/responsiveness';
+@import '../theme/base/platforms/md';
+@import '../theme/base/platforms/ios';
+
+// Icons
+@import '../theme/theming/primary/svg';
+
+// Animations
+@import '../theme/animations/global';
+@import '../theme/animations/component';

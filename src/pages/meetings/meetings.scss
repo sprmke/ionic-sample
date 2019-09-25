@@ -1,0 +1,59 @@
+page-meetings {
+    ion-content {
+        .calendar-container img {
+            width: 80%;
+            margin: 0 auto;
+        }
+        .meeting-item {
+            border-radius: 5px;
+            padding: 15px 22px 10px 22px;
+            margin-bottom: 1rem;
+            cursor: pointer;
+            display: flex;
+            flex-direction: column;
+            overflow: visible;
+        
+            .mi-top {
+                display: flex;
+        
+                .mi-info {
+                    flex: 10;
+
+                    .mi-date {
+                        font-weight: 600;
+                    }
+                }
+                .mi-agenda {
+                    flex: 1;
+                    background-image: url('/assets/icon/calendar_agenda.svg');
+                    background-repeat: no-repeat;
+                    background-position: top center;
+                    opacity: 0.5;
+                    margin-right: 1rem;
+                }
+                .mi-image {
+                    flex: 1;
+                    position: relative;
+                    background-repeat: no-repeat;
+                    background-position: top center;
+                    opacity: 0.5;
+
+                    &.upcoming {
+                        background-image: url('/assets/icon/calendar_active.svg');
+                    }
+                    &.prev {
+                        background-image: url('/assets/icon/calendar_notes.svg');
+                    }
+                }
+            }
+            .mi-bottom {
+                display: flex;
+                flex-direction: column;
+        
+                .mi-info {
+                    display: flex;
+                }
+            }
+        }
+    }
+}

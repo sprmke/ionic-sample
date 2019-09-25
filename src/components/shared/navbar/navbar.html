@@ -1,0 +1,15 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <button class="navbar-menu" ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title class="navbar-title">
+      <strong>{{ activePage }}</strong>
+    </ion-title>
+    <ion-buttons end>
+      <button class="navbar-properties" ion-button tappable (click)="presentPropertiesModal()">
+      <img src="assets/imgs/building-background.jpeg" alt="Selected property">
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>

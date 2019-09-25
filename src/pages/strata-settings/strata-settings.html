@@ -1,0 +1,23 @@
+<app-navbar [activePage]="'Strata Settings'"></app-navbar>
+
+<ion-content>
+  <div class="segment-container mt-4 mb-4">
+    <ion-segment [(ngModel)]="strataSettingsSegment">
+        <ion-segment-button class="btn" value="general">
+            <span class="button-inner">General</span>
+        </ion-segment-button>
+        <ion-segment-button class="btn" value="theme">
+            <span class="button-inner">Theme</span>
+        </ion-segment-button>
+    </ion-segment>
+  </div>
+
+  <div class="segment-content" [ngSwitch]="strataSettingsSegment">
+    <div class="strata-settings-segment" *ngSwitchCase="'general'">
+      <app-general></app-general>
+    </div>
+    <div class="strata-settings-segment" *ngSwitchCase="'theme'">
+      <app-theme></app-theme>
+    </div>
+  </div>
+</ion-content>

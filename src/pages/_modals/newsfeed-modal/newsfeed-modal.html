@@ -1,0 +1,35 @@
+<ion-header>
+  <ion-navbar color="primary" class="page-modal">
+      <ion-buttons left>
+          <button ion-button icon-only (click)="dismissModal()">
+              <ion-icon name="arrow-back"></ion-icon>
+          </button>
+      </ion-buttons>
+      <ion-title class="navbar-title">
+        <strong>Pinned posts</strong>
+      </ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content class="page-modal">
+  <ion-slides (ionSlideDidChange)="slideChanged()">
+    <ion-slide>
+      <!-- Card layout (Repair) -->
+      <app-card-repair [postType]="'pinned'"></app-card-repair>
+    </ion-slide>
+    <ion-slide>
+      <!-- Card layout (Levies) -->
+      <app-card-levies [postType]="'pinned'"></app-card-levies>
+    </ion-slide>
+    <ion-slide>
+      <!-- Card layout (Manager post) -->
+      <app-card-manager-post [postType]="'pinned'"></app-card-manager-post>
+    </ion-slide>
+    <ion-slide>
+      <!-- Card layout (Payment IP) -->
+      <app-card-payment [postType]="'pinned'"></app-card-payment>
+    </ion-slide>
+  </ion-slides>
+</ion-content>
+

@@ -1,0 +1,13 @@
+app-property-insurance {
+    table tr td:nth-child(2) {
+        width: 130px;
+    }
+    @media screen and (min-width: 500px) {
+        table tr td:nth-child(1) {
+            min-width: 40px;
+        }
+        table tr td:nth-child(2) {
+            min-width: 200px;
+        }
+    }
+}

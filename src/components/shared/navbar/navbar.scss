@@ -1,0 +1,45 @@
+app-navbar {
+    @media screen and (min-width: 500px) {
+        ion-navbar {
+            padding-top: 0 !important;
+            padding-bottom: 0 !important;
+            height: 65px;
+        }
+    }
+    .navbar-menu {
+        position: absolute;
+        left: 0;
+    }
+    ion-buttons {
+        position: absolute;
+        right: 0;
+    }
+
+    .navbar-properties {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 35px;
+        height: 35px;
+        border-radius: 50%;
+        overflow: hidden;
+        border: 2px solid #fff;
+        margin: 0 1.25rem;
+
+        @media screen and (min-width: 500px) {
+            width: 42px;
+            height: 42px;
+        }
+
+        .button-inner {
+            height: 35px;
+            width: 35px;
+
+            img {
+                height: 100%;
+                max-width: unset;
+            }
+        }
+    }
+}

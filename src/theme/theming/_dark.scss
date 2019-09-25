@@ -1,0 +1,414 @@
+@mixin dark-theme($theme) {
+
+    // ========================================================================
+    // Colors
+    // ========================================================================
+    
+    // Heading/Text
+    $white: #fff;
+    $light: #e0e2e8;
+    $text-color: #5f677c;
+    $heading-color: #818b9e;
+
+    // Card
+    $drk-card-color: #212834;
+    $drk-card-shadow: #364052;
+
+    // Input
+    $drk-input-color: #272f3e;
+
+    // Line seperator
+    $drk-card-line-color: #313844;
+    $drk-page-lline-color: #262f3e;
+
+    // Hotdog
+    $drk-bg-hotdog: #28303E;
+
+
+    // ========================================================================
+    // Global
+    // ========================================================================
+
+    // Headings
+    h1, h2, h3, h4, h5, h6, ion-card-title {
+        color: $heading-color !important;
+    }
+
+    // Text
+    p, span:not(.button-inner):not(._text-primary), input, input::placeholder, textarea, select, ion-label, ion-item, table td {
+        color: $text-color !important;
+    }
+    ._ts-white {
+        color: $white !important;
+    }
+    ._ts-smoke {
+        color: $light !important;
+    }
+
+    // Input
+    input {
+        background: $drk-input-color !important;
+    }
+    // Inputs
+    .item-input {
+        border-bottom-color: lighten($drk-card-line-color, 15%) !important;
+
+        &.input-has-focus,
+        &.ng-valid.item-input-has-value  {
+            .item-inner {
+                border-bottom-color: lighten($drk-card-line-color, 15%) !important;
+            }
+        }
+    }
+
+    // Item
+    ion-item {
+        background: $drk-card-color;
+    }
+
+    // Toggle
+    ion-toggle {
+        .toggle-icon {
+            background: lighten($theme, 8%);
+
+            .toggle-inner {
+                background: $theme;
+            }
+        }
+    }
+
+    // Ion select
+    ion-select {
+        .select-icon .select-icon-inner {
+            color: $theme;
+        }
+    }
+    
+    // List
+    ion-list {
+        ion-list-header {
+            background: #2a3342 !important;
+    
+            ion-label {
+                color: $heading-color !important;
+            }
+        }
+    }
+
+    // Item group
+    ion-item-group {
+        ion-item-divider {
+            background: $theme !important;
+        }
+    }
+    
+    // Content
+    ion-content.content {
+        background: $theme !important;
+    }
+
+    // Modal
+    ion-content.page-modal {
+        background: $drk-card-color !important;
+        
+        ion-card {
+            box-shadow: none !important;
+        }
+    }
+    ion-backdrop {
+        opacity: 0.8 !important;
+    }
+
+    // Card
+    ion-card {
+        background: $drk-card-color;
+        box-shadow: 0 1px 2px $drk-card-shadow !important;
+
+        ._card-line-top {
+            border-top: 1px solid $drk-card-line-color;
+        }
+        ._card-line-right {
+            border-right: 1px solid $drk-card-line-color;
+        }
+        ._card-line-bottom {
+            border-bottom: 1px solid $drk-card-line-color;
+        }
+        ._card-line-left {
+            border-left: 1px solid $drk-card-line-color;
+        }
+    }
+
+    // Segment button
+    ion-segment-button {
+        background: $drk-card-color !important;
+        border: 1px solid $drk-card-color !important;
+    }
+
+    // Navbar
+    ion-navbar {
+        .searchbar-input {
+            background: rgba(39, 47, 62, 0.8) !important;
+        }
+    }
+
+    // Alert
+    ion-alert .alert-wrapper {
+        background: $drk-card-color;
+
+        .alert-message {
+            color: $text-color;
+        }
+
+        .alert-radio-group {
+            border-top: 1px solid $drk-card-line-color;
+            border-bottom: 1px solid $drk-card-line-color;
+
+            .alert-radio-icon {
+                border-color: $theme;
+            }
+            .alert-radio-label {
+                color: $text-color;
+            }
+        }
+    }
+
+    // Tabs
+    ion-tabs .tabbar {
+        background: $drk-card-color;
+
+        .tab-button-icon {
+            color: #525d6f;
+        }
+    }
+
+    // Popovers
+    ion-popover {
+        .item-inner {
+            border-bottom: 1px solid $drk-card-line-color;
+        }
+    }
+
+    // Hotdog
+    .hotdog {
+        background: $drk-bg-hotdog;
+    }
+
+    // Pseudo bg
+    ._bg-shade-pseudo-before::before,
+    ._bg-shade-pseudo-after::after {
+        background: $theme;
+    }
+
+    // Loading
+    .is-loading::before {
+        background: $drk-card-color;
+    }
+
+    // ========================================================================
+    // Pages
+    // ========================================================================
+
+    // Newsfeed modal
+    page-newsfeed-modal {
+        .cl-pinned {
+            background: $theme;
+            box-shadow: 0 1px 1px $drk-card-shadow !important;
+        }
+    }
+
+    // Profile
+    .profile-details {
+        background: $drk-card-color;
+        box-shadow: 0 1px 1px $drk-card-shadow !important;
+    }
+    .profile-name,
+    .profile-address {
+        color: $white !important;
+    }
+    .profile-details p:first-child {
+        border-right: 1px solid $drk-card-line-color !important;
+    }
+
+    // Building 
+    page-building {
+        ion-slides.header-image {
+            background: #1c222d;
+        }
+        .main-content {
+            background: $theme !important;
+        }
+    }
+
+    // Building Modal gallery
+    gallery-modal {
+        ion-content.content {
+            background: rgba(0, 0, 0, 0.85) !important;
+        }
+    }
+
+    // Financial
+    page-financial {
+        .open-item .icon {
+            background: $drk-card-color;
+        }
+        button.button-default.button-round {
+            span._ts-white {
+                color: $white !important;
+            }
+        }
+    }
+
+    // Notification
+    page-notifications {
+        ion-content#page-notification {
+            background: $drk-card-color !important;
+
+            ion-list {
+                ion-item {
+                    &.active {
+                        background: #29313e !important;
+                    }
+                    &:first-child {
+                        border-top: 1px solid $drk-card-line-color !important;
+                    }
+                    &:not(:last-child) {
+                        border-bottom: 1px solid $drk-card-line-color !important;
+                    }
+                    &:last-child {
+                        border-bottom: none !important;
+                    }
+                }
+            }
+        }
+    }
+
+    // Settings
+    page-settings {
+        ion-content#page-settings {
+            background: $drk-card-color !important;
+
+            ion-list {
+                ion-item:not(:last-child) .item-inner {
+                    border-bottom: 1px solid $drk-card-line-color !important;
+                }
+            }
+        }
+    }
+
+    // Documents
+    page-document {
+        ion-card-header {
+            background: #272e3a;
+        }
+    }
+
+    // Levies
+    page-levies {
+        .lp-total-levy-due,
+        .lp-total-arrears {
+            background: $drk-card-color;
+        }
+        .text-red {
+            color: #f13030 !important;
+        }
+    }
+
+    // My Properties
+    page-my-properties-modal {
+        ion-item {
+            &.active {
+                background: #29313e !important
+            }
+
+            border-bottom: 1px solid $drk-card-line-color !important;
+        }
+    }
+
+    // Login
+    page-login,
+    page-forgot-password {
+        .login-body {
+            background: $drk-card-color;
+            
+            .item-inner {
+                border-bottom: 1px solid $drk-card-line-color;
+
+                input {
+                    background: transparent !important;
+                }
+            }
+            .login-inputs {
+                border-bottom: 1px solid $drk-card-line-color;
+            }
+        }
+        .lf-signup {
+            color: $heading-color !important;
+        }
+    }
+
+
+    // ========================================================================
+    // Components
+    // ========================================================================
+
+    // Newsfeed
+    app-newsfeed ion-scroll .cl-body::after {
+        background: linear-gradient(to top, $drk-card-color, transparent);
+    }
+
+    // Sidemenu
+    .sidemenu-body {
+        background: $drk-card-color !important;
+
+        ion-item-divider {
+            background: $drk-card-color !important;
+        }
+        ion-item.active {
+            background: #293140 !important;
+        }
+    }
+
+    // Splash
+    .splash .spinner {
+        background: #6f6f6f;
+    }
+
+    // Card comment
+    .cl-comment-input {
+        border: 1px solid $drk-input-color !important;
+    }
+
+    // Card icon image
+    .card-icon-img {
+        background: $drk-bg-hotdog;
+    }
+
+    // Page title
+    .page-title-container p {
+        color: #7c859a !important;
+    }
+
+    // Theme
+    app-theme {
+        ion-scroll {
+            background: #3c475a;
+            border-radius: 4px;
+            overflow: hidden;
+        }
+    }
+
+    // ========================================================================
+    // Platform specific
+    // ========================================================================
+
+    .ios {
+        // Toggle
+        .toggle-ios .toggle-icon::before {
+            background: lighten($theme, 10%);
+        }
+        .alert-ios .alert-button {
+            border-top: 0.55px solid $drk-card-line-color;
+            border-right: 0.55px solid $drk-card-line-color;
+        }
+    }
+}

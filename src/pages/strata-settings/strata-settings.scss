@@ -1,0 +1,11 @@
+page-strata-settings {
+    & > ion-content {
+		margin-top: 56px;
+		background: #e2e7ef !important;
+		// background: #efeff4 !important;
+
+		& > .scroll-content {
+			margin-bottom: 112px !important;
+        }
+    }
+}

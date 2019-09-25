@@ -1,0 +1,11 @@
+<div class="financial-summary">
+  <ion-card class="open-item" padding>
+      <div class="icon">
+        <img [src]="icon" alt="admin cash icon" />
+      </div>
+      <div class="card-body">
+        <p class="mb-0 _text-primary"><strong>{{ label }}</strong></p>
+        <p class="mb-0 _ts-default"> <span *ngIf="balance">{{balance | currency}}</span><span *ngIf="!balance">{{0 | currency}}</span></p>
+      </div>
+  </ion-card>
+</div>

@@ -1,0 +1,21 @@
+page-faqs {
+    & > ion-content {
+		margin-top: 56px;
+		background: #e2e7ef !important;
+		// background: #efeff4 !important;
+
+		& > .scroll-content {
+			margin-bottom: 112px !important;
+        }
+    }
+    ion-card {
+        ion-card-header {
+            white-space: normal;
+        }
+    }
+    .card-content {
+        padding: 0 1.5rem; 
+        max-height: 0px;
+        background: #f6f7f9;
+    }
+}

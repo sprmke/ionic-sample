@@ -1,0 +1,144 @@
+app-levy-info {
+    .text-blue {
+        color: #3579ee !important;
+    }
+    .ll-total-balance {
+        padding: 1.25rem 4.5rem !important;
+
+        @media screen and (max-width: 320px) {
+          padding: 1.25rem 2.5rem !important;
+        }
+        
+        h4 {
+            font-size: 2rem !important;
+        }
+    }
+    .lot-table {
+        padding-top: 5px;
+        position: relative;
+        overflow: hidden;
+      
+        @media screen and (max-width: 767px) {
+          overflow: scroll;
+        }
+      
+          table {
+          position: relative;
+          overflow: hidden;
+      
+          &::after {
+            position: absolute;
+            content: '';
+            left: 0;
+            right: 0;
+            top: 251px;
+            height: 40px;
+            width: 100%;
+            z-index: 3;
+      
+            @media screen and (min-width: 768px) and (max-width: 821px) {
+              top: 268px;
+            }
+            @media screen and (max-width: 767px) {
+              top: 359px;;
+            }
+          }
+          tbody {
+            display: block;
+            height: 250px;
+            overflow-y: scroll;
+            overflow-x: hidden;
+      
+            @media screen and (max-width: 767px) {
+              height: 350px;
+            }
+          }
+          tr {
+            display: flex;
+            margin-right: 0;
+      
+            @media screen and (max-width: 991px) {
+              width: 94%;
+            }
+        
+            td {
+              width: 20%;
+      
+              @media screen and (max-width: 767px) {
+                min-width: 130px;
+      
+                &:nth-child(2) {
+                  min-width: 200px;
+                }
+              }
+        
+              &:first-child {
+                position: relative;
+              }
+            }
+          }
+          }
+      }
+      
+      .levy-lot {
+        @media screen and (max-width: 320px) {
+          .media .image {
+            width: 40px;
+            height: 40px;
+
+            svg {
+              transform: scale(0.75);
+            }
+          }
+        }
+          .media-actions {
+            button {
+              border-radius: 4px;
+              cursor: pointer;
+            }
+          }
+          table {
+            thead, tbody {
+              tr {
+                td:nth-child(2) {
+                  width: 50%;
+                }
+              }
+            }
+            thead {
+              background: transparent !important;
+              font-weight: bold;
+            }
+            tbody {
+              tr:last-child {
+                border-bottom: none !important;
+              }
+            }
+          }
+          .llf-left{
+            button {
+              border-radius: 4px;
+              cursor: pointer;
+            }
+          }
+          .llf-right {
+            h4.text-danger {
+              color: #dc3545 !important;
+            }
+          }
+        }
+      
+      .pre-line {
+          white-space: pre-line;
+      }
+      
+      .svg-pay-now:hover {
+        g, polygon, path {
+          stroke: #fff;
+        }
+      }
+      
+      .pl-2rem {
+        padding-left: 2.25rem !important;
+      }
+}

@@ -1,0 +1,80 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title class="navbar-title">
+      <strong>Settings</strong>
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content id="page-settings">
+  <!-- Notifications -->
+  <ion-list class="m-0">
+    <ion-list-header class="m-0">
+      <strong>Notifications</strong>
+    </ion-list-header>
+    <ion-item class="d-flex py-1 px-3">
+      <ion-label>Received messages</ion-label>
+      <ion-toggle checked="true"></ion-toggle>
+    </ion-item>
+    <ion-item class="d-flex py-1 px-3">
+      <ion-label>Replied messages</ion-label>
+      <ion-toggle checked="false"></ion-toggle>
+    </ion-item>
+    <ion-item class="d-flex py-1 px-3">
+      <ion-label>Levy notice due</ion-label>
+      <ion-toggle checked="true"></ion-toggle>
+    </ion-item>
+    <ion-item class="d-flex py-1 px-3">
+      <ion-label>Levy notice issued</ion-label>
+      <ion-toggle checked="true"></ion-toggle>
+    </ion-item>
+    <ion-item class="d-flex py-1 px-3">
+      <ion-label>Upcoming meeting</ion-label>
+      <ion-toggle checked="false"></ion-toggle>
+    </ion-item>
+    <ion-item class="d-flex py-1 px-3">
+      <ion-label>Activity on pinned posts</ion-label>
+      <ion-toggle checked="false"></ion-toggle>
+    </ion-item>
+    <ion-item class="d-flex py-1 px-3">
+      <ion-label>Frequency</ion-label>
+      <ion-select [(ngModel)]="frequency">
+        <ion-option value="instantly" selected="true">Instantly</ion-option>
+        <ion-option value="30-mins">Every 30 minutes</ion-option>
+        <ion-option value="1-hour">Every 1 hour</ion-option>
+        <ion-option value="2-hours">Every 2 hours</ion-option>
+        <ion-option value="6-hours">Every 6 hours</ion-option>
+        <ion-option value="12-hours">Every 12 hours</ion-option>
+        <ion-option value="daily">Daily</ion-option>
+        <ion-option value="weekly">Weekly</ion-option>
+      </ion-select>
+    </ion-item>
+  </ion-list>
+
+  <!-- Default property -->
+  <ion-list class="m-0">
+    <ion-list-header class="m-0">
+      <strong>Properties</strong>
+    </ion-list-header>
+    <ion-item class="d-flex py-1 px-3">
+      <ion-label>Default property</ion-label>
+      <ion-select [(ngModel)]="defaultProperty">
+        <ion-option value="last-viewed">Last property viewed</ion-option>
+        <ion-option value="hornsby-building" selected="true">Hornsby Building</ion-option>
+        <ion-option value="st-leonards-residence">St Leonards Residence</ion-option>
+        <ion-option value="artarmon-building">Artarmon Building</ion-option>
+        <ion-option value="newtown-complex">Newtown Complex</ion-option>
+        <ion-option value="glebe-building">Glebe Building</ion-option>
+      </ion-select>
+    </ion-item>
+  </ion-list>
+
+  <!-- Change password -->
+  <ion-list class="m-0">
+    <ion-list-header class="m-0">
+      <strong>Password</strong></ion-list-header>
+    <ion-item class="d-flex py-1 px-3">
+      <button ion-button outline block>Change password</button>
+    </ion-item>
+  </ion-list>
+</ion-content>

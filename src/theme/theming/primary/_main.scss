@@ -1,0 +1,196 @@
+@mixin primary($primary, $gradient, $dark-gradient) {
+
+    // ========================================================================
+    // Global
+    // ========================================================================
+
+    // Header
+    .toolbar-background {
+        background: $primary;
+    }
+
+    // Buttons
+    ion-segment-button.segment-activated {
+        background: $primary !important;
+        border-color: $primary !important;
+    }
+    ion-segment-button:not(.segment-activated) {
+        color: $primary !important;
+    }
+    button:not([clear]):not([outline]):not([menuclose]):not([menutoggle]):not(.item-cover):not(.alert-radio):not(.alert-button) {
+        background: $primary !important;
+    }
+    ion-content {
+        button[clear] {
+            color: $primary !important;
+        }
+    }
+    button[outline] {
+        color: $primary !important;
+        border: 1px solid $primary !important;
+    }
+    // Gallery modal button
+    gallery-modal {
+        button:not([clear]):not([outline]):not([menuclose]):not([menutoggle]):not(.item-cover):not(.alert-radio):not(.alert-button) {
+            background: transparent !important;
+        }
+    }
+    
+    // Navbar
+    .tabs .tab-button[aria-selected=true] .tab-button-icon {
+        color: $primary;
+    }
+
+    // Text
+    ._text-primary {
+        color: $primary !important;
+    }
+
+    // Background
+    ._bg-primary {
+        background: $primary !important;
+    }
+
+    // Border
+    ._border-primary {
+        border: 1px solid $primary !important;
+    }
+    ._border-primary-2 {
+        border: 2px solid $primary !important;
+    }
+
+    // Links
+    a {
+        color: $primary;
+    }
+
+    // Sidemenu
+    .sidemenu .sidemenu-header::after {
+        background: $dark-gradient;
+    }
+
+    // Toggle
+    ion-toggle.toggle-checked {
+        .toggle-icon {
+            background: lighten($primary, 15%);
+
+            .toggle-inner {
+                background: $primary;
+            }
+        }
+    }
+
+    // Alert
+    ion-alert .alert-wrapper {
+        .alert-button {
+            color: $primary;
+        }
+        [aria-checked=true] .alert-radio-icon {
+            border-color: $primary;
+        }
+        [aria-checked=true] .alert-radio-inner {
+            background: $primary;
+        }
+        [aria-checked=true] .alert-radio-label {
+            color: $primary;
+        }
+        .alert-md.alert-input:focus {
+            border-bottom: 2px solid $primary;
+        }
+    }
+
+    // ========================================================================
+    // Pages
+    // ========================================================================
+    
+    // Dashboard
+    .blue-header {
+        background: $gradient !important;
+    }
+
+    // Building
+    .building-name {
+        background: transparentize($primary, 0.1);
+    }
+    .building-navbar.colored ion-navbar .toolbar-background {
+        background: $primary !important;
+    }
+
+    // Profile
+    .profile-header {
+        background: $gradient !important;
+    }
+
+    // Notifications
+    .notif-name {
+        color: darken($primary, 5%) !important;
+    }
+    .hni-is-active .circle {
+        background: $primary !important;
+    }
+
+    // Login
+    .login-page {
+        &::before {
+            background: $gradient;
+        }
+    }
+    .login-inputs.ng-valid, 
+    .login-inputs.ng-valid {
+        border-bottom: 1px solid $primary !important;
+    }
+
+    // ========================================================================
+    // Components
+    // ========================================================================
+
+    // Sidemenu
+    app-sidemenu ion-item.active ion-label {
+        color: $primary !important;
+    }
+
+    // Splash
+    .splash {
+        background: $primary !important;
+    }
+
+    // Card icon image
+    .card-icon-img {
+        border: 1px solid $primary;
+    }
+
+    // Theme
+    app-theme {
+        .phone {
+            &.selected {
+                border: 2px solid $primary;
+            }
+        }
+        .bg-container {
+            .phone {
+                .header, .circle { background: lighten($primary, 15%); }
+            }
+        }
+    }
+
+    // ========================================================================
+    // Platform specific
+    // ========================================================================
+
+    .ios {
+        // Select
+        ion-alert .alert-wrapper [aria-checked=true] .alert-radio-inner {
+            background: none !important;
+            border-color: $primary !important;
+        }
+    }
+
+    .md {
+        // Alert
+        ion-alert.alert-md .alert-wrapper {
+            .alert-input:focus {
+                border-bottom: 2px solid $primary;
+            }
+        }
+    }
+}

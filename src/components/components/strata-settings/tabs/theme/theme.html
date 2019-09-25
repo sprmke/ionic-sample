@@ -1,0 +1,93 @@
+<ion-card padding>
+  <div class="d-flex flex-column flex-wrap">
+    <div class="primary-container w-100">
+      <h2 class="theme-label w-100 mt-1 mb-3">Primary</h2>
+      <ion-scroll scrollX="true" direction="x" class="mb-2">
+          <div class="phone phone-1" (click)="onActivatePrimaryColor('p-red', 2)" [ngClass]="{'selected': brandingParams.primary.id == 2}">
+            <div class="header"> </div>
+            <div class="body">
+              <div class="circle"></div>
+            </div>
+            <div class="footer"> </div>
+          </div>
+
+          <div class="phone phone-2" (click)="onActivatePrimaryColor('p-redorange', 3)" [ngClass]="{'selected': brandingParams.primary.id == 3}">
+            <div class="header"> </div>
+            <div class="body">
+              <div class="circle"></div>
+            </div>
+            <div class="footer"> </div>
+          </div>
+          
+          <div class="phone phone-3" (click)="onActivatePrimaryColor('p-orange', 4)" [ngClass]="{'selected': brandingParams.primary.id == 4}">
+            <div class="header"> </div>
+            <div class="body">
+              <div class="circle"></div>
+            </div>
+            <div class="footer"> </div>
+          </div>
+          
+          <div class="phone phone-4" (click)="onActivatePrimaryColor('p-green', 1)" [ngClass]="{'selected': brandingParams.primary.id == 1}">
+            <div class="header"> </div>
+            <div class="body">
+              <div class="circle"></div>
+            </div>
+            <div class="footer"> </div>
+          </div>
+          
+          <div class="phone phone-5" (click)="onActivatePrimaryColor('p-lightblue', 5)" [ngClass]="{'selected': brandingParams.primary.id == 5}">
+            <div class="header"> </div>
+            <div class="body">
+              <div class="circle"></div>
+            </div>
+            <div class="footer"> </div>
+          </div>
+          
+          <div class="phone phone-6" (click)="onActivatePrimaryColor('p-blue', 6)" [ngClass]="{'selected': brandingParams.primary.id == 6}">
+            <div class="header"> </div>
+            <div class="body">
+              <div class="circle"></div>
+            </div>
+            <div class="footer"> </div>
+          </div>
+          
+          <div class="phone phone-7" (click)="onActivatePrimaryColor('p-purple', 7)" [ngClass]="{'selected': brandingParams.primary.id == 7}">
+            <div class="header"> </div>
+            <div class="body">
+              <div class="circle"></div>
+            </div>
+            <div class="footer"> </div>
+          </div>
+      </ion-scroll>
+    </div>
+    <div class="bg-container w-100">
+      <h2 class="theme-label w-100 mt-4 mb-3">Background</h2>
+      <ion-scroll scrollX="true" direction="x" class="mb-2">
+          <div class="phone phone-1" (click)="onActivateBgColor('bg-default', 1)" [ngClass]="{'selected': brandingParams.bgColor.id == 1}">
+            <div class="header"> </div>
+            <div class="body">
+              <div class="circle"></div>
+            </div>
+            <div class="footer"> </div>
+          </div>
+          <div class="phone phone-2" (click)="onActivateBgColor('bg-light', 2)" [ngClass]="{'selected': brandingParams.bgColor.id == 2}">
+            <div class="header"> </div>
+            <div class="body">
+              <div class="circle"></div>
+            </div>
+            <div class="footer"> </div>
+          </div>
+          <div class="phone phone-3" (click)="onActivateBgColor('bg-dark', 3)" [ngClass]="{'selected': brandingParams.bgColor.id == 3}">
+            <div class="header"> </div>
+            <div class="body">
+              <div class="circle"></div>
+            </div>
+            <div class="footer"> </div>
+          </div>
+      </ion-scroll>
+    </div>
+  </div>
+  <div class="d-flex mt-3 pt-2 _card-line-top">
+    <button ion-button round (click)="onSaveBranding()">Save</button>
+  </div>
+</ion-card>

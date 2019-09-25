@@ -1,0 +1,21 @@
+app-property-lots {
+    table tr td:nth-child(2) {
+        width: 110px;
+    }
+    ion-card {
+        padding: 1.5rem 1.5rem 0.5rem 1.5rem !important;
+
+        button {
+            text-transform: initial !important;
+        }
+    }
+
+    @media screen and (min-width: 500px) {
+        table tr td:nth-child(1) {
+            min-width: 40px;
+        }
+        table tr td:nth-child(2) {
+            min-width: 160px;
+        }
+    }
+}

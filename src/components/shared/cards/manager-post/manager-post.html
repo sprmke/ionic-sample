@@ -1,0 +1,36 @@
+<!-- Card layout (Manager post) -->
+<ion-card class="card-layout cl-manager-post" padding>
+  <div class="cl-header d-flex flex-row mb-3">
+    <div class="card-user-img img-large">
+      <img src="https://dev-piqstrataportal.tooltwist-project.com/assets/dashboard/building-owner.png" alt="">
+    </div>
+    <div class="cl-header-details flex-1 d-flex flex-column justify-content-center pl-3">
+      <div class="clh-top d-flex align-items-center justify-content-between">
+      <div class="d-flex align-items-center">
+        <a class="cl-title m-0"><strong>Melisa Brown</strong></a>
+        <p class="cl-type m-0">Manager</p>
+      </div>
+      <button ion-button clear class="cl-pinned p-0 d-flex justify-content-center align-items-center">
+          <svg _ngcontent-c5="" *ngIf="postType == 'pinned'" class="svg-pinned no-hover" height="24" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><title _ngcontent-c5="">Pinned post</title><g _ngcontent-c5="" class="nc-icon-wrapper" fill="#41bb72"><path _ngcontent-c5="" d="M6.672,15.914l-5.379,5.379c-0.391,0.391-0.391,1.023,0,1.414C1.488,22.902,1.744,23,2,23 s0.512-0.098,0.707-0.293l5.379-5.379L6.672,15.914z" data-color="color-2"></path><path _ngcontent-c5="" d="M23.707,7.293l-7-7c-0.391-0.391-1.023-0.391-1.414,0s-0.391,1.023,0,1.414l0.908,0.908L5.18,8.766 L3.707,7.293c-0.391-0.391-1.023-0.391-1.414,0s-0.391,1.023,0,1.414l13,13C15.488,21.902,15.744,22,16,22s0.512-0.098,0.707-0.293 c0.391-0.391,0.391-1.023,0-1.414l-1.473-1.473l6.151-11.021l0.908,0.908C22.488,8.902,22.744,9,23,9s0.512-0.098,0.707-0.293 C24.098,8.316,24.098,7.684,23.707,7.293z" fill="#41bb72"></path></g></svg>
+          <svg _ngcontent-c5="" *ngIf="postType == 'recent'" height="24" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><title _ngcontent-c5="">Pinned post</title><g _ngcontent-c5="" class="nc-icon-wrapper" fill="#999999" stroke="#999999" stroke-linecap="square" stroke-linejoin="miter" stroke-width="2"><line _ngcontent-c5="" data-cap="butt" fill="none" stroke="#999999" stroke-linecap="butt" stroke-miterlimit="10" x1="4.008" x2="16.844" y1="11.008" y2="3.844"></line><line _ngcontent-c5="" data-cap="butt" fill="none" stroke="#999999" stroke-linecap="butt" stroke-miterlimit="10" x1="12.992" x2="20.156" y1="19.992" y2="7.156"></line><line _ngcontent-c5="" fill="none" stroke="#999999" stroke-miterlimit="10" x1="15" x2="22" y1="2" y2="9"></line><line _ngcontent-c5="" data-color="color-2" fill="none" stroke-miterlimit="10" x1="8.5" x2="2" y1="15.5" y2="22"></line><line _ngcontent-c5="" fill="none" stroke="#999999" stroke-miterlimit="10" x1="2" x2="15" y1="9" y2="22"></line></g></svg>
+      </button>
+      </div>
+      <p class="cl-subtitle m-0">12 days ago</p>
+    </div>
+  </div>
+  <div class="cl-body hotdog br-1 p-3 d-flex flex-column mb-3">
+      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatem quibusdam assumenda quidem magni sapiente vero inventore atque temporibus necessitatibus ducimus at, ullam ut optio accusamus. Vero eos iusto consequatur voluptatibus!</p>
+      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatem quibusdam assumenda quidem magni sapiente vero inventore atque temporibus necessitatibus ducimus at, ullam ut optio accusamus. Vero eos iusto consequatur voluptatibus!</p>
+  </div>
+  <div class="cl-footer d-flex flex-row">
+    <div class="cl-comment-avatar card-user-img img-small mr-3"><img src="assets/imgs/avatar.png" alt="User avatar"></div>
+    <div class="cl-comment-input flex-1 d-flex">
+      <input class="form-control flex-1" type="text" placeholder="Write a comment.." aria-label="Recipient's username" aria-describedby="button-addon2">
+      <div class="input-group-append">
+      <button ion-button clear class="m-0 h-100">
+        <svg class="svg-thumbnail" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewbox="0 0 16 16"><title>Upload image</title><g class="nc-icon-wrapper" stroke-width="1" fill="#666666" stroke="#666666"><rect x="1.5" y="3.5" width="13" height="11" fill="none" stroke="#666666" stroke-linecap="round" stroke-linejoin="round"></rect><line x1="4.5" y1="0.5" x2="11.5" y2="0.5" fill="none" stroke-linecap="round" stroke-linejoin="round" data-color="color-2"></line><polygon points="3.5 12.5 9.5 7.5 12.5 12.5 3.5 12.5" fill="none" stroke-linecap="round" stroke-linejoin="round" data-color="color-2"></polygon><circle cx="5" cy="7" r="1" data-cap="butt" data-color="color-2" data-stroke="none" stroke="none"></circle></g></svg>
+      </button>
+      </div>
+    </div>
+  </div>
+</ion-card>

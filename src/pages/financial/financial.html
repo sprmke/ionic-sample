@@ -1,0 +1,83 @@
+<app-navbar [activePage]="'Financial'"></app-navbar>
+
+<ion-content>
+  <ion-grid class="p-0 mt-4 pt-4">
+    <ion-row>
+      <ion-col col-4 class="mb-2">
+        <app-financial-types [label]="'Admin Fund'" [balance]="adminBalance" [icon]="'assets/icon/icon-admin-cash.svg'" [balanceIsLoading]="bankBalancesLoading"></app-financial-types>
+      </ion-col>
+      <ion-col col-4 class="mb-2">
+        <app-financial-types [label]="'Sinking Cash'" [balance]="sinkingBalance" [icon]="'assets/icon/icon-sinking-cash.svg'" [balanceIsLoading]="bankBalancesLoading || buildingIsLoading"></app-financial-types>
+      </ion-col>
+      <ion-col col-4 class="mb-2">
+        <app-financial-types [label]="'Bank Balance'" [balance]="totalBankBalance" [icon]="'../../assets/icon/icon-bank.svg'" [balanceIsLoading]="bankBalancesLoading"></app-financial-types>
+      </ion-col>
+      <ion-col col-6 class="mb-0">
+        <app-financial-types [label]="'Investment Funds'" [balance]="investmentBalance" [icon]="'../../assets/icon/icon-investment.svg'" [balanceIsLoading]="bankBalancesLoading"></app-financial-types>
+      </ion-col>
+      <ion-col col-6 class="mb-0">
+        <app-financial-types [label]="'Arrears'" [balance]="totalArrears" [icon]="'../../assets/icon/icon-arrears.svg'" [balanceIsLoading]="arrearsLoading"></app-financial-types>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <ion-grid>
+    <ion-row class="d-flex flex-nowrap">
+      <button ion-button round class="flex-1">
+        <div class="media w-100 justify-content-between align-items-center">
+          <span class="_ts-white m-0 d-flex align-items-center"><strong>Financial Report</strong></span>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><g class="nc-icon-wrapper" stroke-linecap="square" stroke-linejoin="miter" stroke-width="2" fill="#666666" stroke="#fff"><line data-cap="butt" fill="none" stroke="#fff" stroke-miterlimit="10" x1="12" y1="1" x2="12" y2="17" stroke-linecap="butt"></line> <polyline fill="none" stroke="#fff" stroke-miterlimit="10" points="18,11 12,17 6,11 "></polyline> <line data-color="color-2" fill="none" stroke-miterlimit="10" x1="22" y1="22" x2="2" y2="22"></line></g></svg>
+        </div>
+      </button>
+      <button ion-button round class="flex-1">
+        <div class="media w-100 justify-content-between align-items-center">
+          <span class="_ts-white m-0 d-flex align-items-center"><strong>Annual Report</strong></span>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><g class="nc-icon-wrapper" stroke-linecap="square" stroke-linejoin="miter" stroke-width="2" fill="#666666" stroke="#fff"><line data-cap="butt" fill="none" stroke="#fff" stroke-miterlimit="10" x1="12" y1="1" x2="12" y2="17" stroke-linecap="butt"></line> <polyline fill="none" stroke="#fff" stroke-miterlimit="10" points="18,11 12,17 6,11 "></polyline> <line data-color="color-2" fill="none" stroke-miterlimit="10" x1="22" y1="22" x2="2" y2="22"></line></g></svg>
+        </div>
+      </button>
+    </ion-row>
+  </ion-grid>
+
+  <ion-grid class="financial-cards p-0">
+    <ion-row>
+      <ion-card padding>
+        <p class="lead _ts-dark _card-line-bottom"><strong>Financial Activity</strong><small class="_ts-lighter ml-2">(all properties)</small></p>
+        <img class="img-fluid" src="assets/icon/tmp-graph-financial-activity.png" alt="financial activity image" />
+        <div class="d-flex justify-content-between mt-3">
+          <button ion-button outline class="flex-1">
+            Set date range
+          </button>
+          <button ion-button outline class="flex-1">
+            Download Report
+          </button>
+        </div>
+      </ion-card>
+    </ion-row>
+    <ion-row>
+      <ion-card padding>
+        <p class="lead _ts-dark _card-line-bottom"><strong>Bank Balance</strong><small class="_ts-lighter ml-2">2018</small></p>
+        <img class="img-fluid w-100" src="assets/icon/tmp-graph-balance.png" alt="graph balance image" />
+        <div class="d-flex justify-content-between mt-3">
+            <button ion-button outline class="flex-1">
+            Set date range
+          </button>
+          <button ion-button outline class="flex-1">
+            Download Report
+          </button>
+        </div>
+      </ion-card>
+    </ion-row>
+    <ion-row>
+      <ion-card padding>
+        <div class="card performance-container" [ngClass]="{'is-loading' : isYoyGenerating}">
+          <img src="assets/icon/tmp-graph-yoy-performance.png" alt="">
+        </div>
+        <div class="d-flex justify-content-end mt-3">
+          <button ion-button outline class="flex-1">
+            Select financial year
+          </button>
+        </div>
+      </ion-card>
+    </ion-row>
+  </ion-grid>
+</ion-content>

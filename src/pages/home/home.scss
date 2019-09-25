@@ -1,0 +1,38 @@
+page-home {
+	.blue-header {
+		background: linear-gradient(to bottom, #3579ee, #68c3ff);
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		width: 100%;
+		height: 170px;
+	}
+	.header-building-container {
+		position: relative;
+		z-index: 1;
+		width: 90%;
+		margin: 2rem auto 1rem auto !important;
+
+		.card-image {
+			overflow: hidden;
+			max-height: 50vh;
+		}
+
+		ion-card-title {
+			font-size: 1.8rem;
+			margin: 0;
+			padding: 0;
+		}
+		p {
+			font-size: 1.3rem;
+			color: #929292;
+		}
+	}
+	.main-content {
+		.segment-container {
+			padding: 0 3rem;
+			margin-bottom: 2.5rem;
+		}
+	}
+}

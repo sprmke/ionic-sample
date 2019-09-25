@@ -1,0 +1,9 @@
+<div class="splash" [ngClass]="{'fadeOut': !showSplash, 'hidden': splashHidden}">
+	<div class="spinner"></div>
+</div>
+
+<ion-menu [content]="content">
+	<app-sidemenu></app-sidemenu>
+</ion-menu>
+
+<ion-nav [root]="rootPage" #content></ion-nav>

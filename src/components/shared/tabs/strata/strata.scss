@@ -1,0 +1,157 @@
+app-strata {
+    ion-card {
+        padding: 1.5rem 1.5rem 0.5rem 1.5rem !important;
+    }
+    ion-card.manager-info {
+
+        .sbd-owner {
+            display: flex;
+            flex-flow: row wrap;
+            position: relative;
+    
+            &::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 30px;
+                right: 0;
+                height: 60px;
+                z-index: 1;
+                border-radius: 10px;
+                background: #f5f5f5;
+            }
+    
+            .sbdo-image {
+                flex-basis: 70px;
+                display: flex;
+                position: relative;
+                z-index: 2;
+    
+                img {
+                    height: 60px;
+                    width: 60px;
+                    border-radius: 50%;
+                }
+            }
+            .sbdo-details {
+                display: flex;
+                flex-flow: column wrap;
+                justify-content: center;
+                align-content: flex-start;
+                flex: 1;
+                position: relative;
+                z-index: 2;
+            }
+        }
+        .sbd-info {
+    
+            .sbdi-items {
+                display: flex;
+                flex-flow: row wrap;
+                margin-bottom: 1rem;
+    
+                .sbdii-label {
+                    flex-basis: 90px;
+                    display: flex;
+                    justify-content: flex-start;
+                    align-items: flex-start;
+                }
+                .sbdii-value {
+                    flex: 1;
+                }
+            }
+        }
+        .sbd-more {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+    ion-card.committee-members {
+        .cm-owner {
+            display: flex;
+            flex-flow: row wrap;
+            position: relative;
+
+            &::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 30px;
+                right: 0;
+                height: 60px;
+                z-index: 1;
+                border-radius: 10px;
+                background: #f5f5f5;
+            }
+
+            .cm-image {
+                position: relative;
+                z-index: 2;
+                width: 60px;
+                height: 60px;
+                background: #fff;
+
+                svg {
+                    transform: scale(0.8);
+                }
+            }
+            .cm-details {
+                display: flex;
+                flex-flow: column wrap;
+                justify-content: center;
+                align-content: flex-start;
+                flex: 1;
+                position: relative;
+                z-index: 2;
+            }
+        }
+        .cm-info {
+            position: relative;
+
+            &::before {
+                content: '';
+                width: 1px;
+                height: 100%;
+                position: absolute;
+                left: 30px;    
+                background: #f5f5f5;
+            }
+
+            .cm-list {
+                display: flex;
+                flex-flow: column wrap;
+                padding-left: 12px;
+                z-index: 1;
+                position: relative;
+
+                li {
+                    list-style-type: none;
+
+                    &:not(:last-child) {
+                        margin-bottom: 1rem;
+                    }
+
+                    .cm-items {
+                        display: flex;
+                        flex-flow: row wrap;
+                        align-items: center;
+    
+                        img {
+                            width: 35px;
+                            height: 35px;
+                        }
+                        p { 
+                            flex: 1;
+                        }
+                    }
+                }
+            }
+        }
+        .cm-more {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+}

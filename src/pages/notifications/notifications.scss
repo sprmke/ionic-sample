@@ -1,0 +1,97 @@
+page-notifications {
+    ion-content#page-notification {
+        background: #fff !important;
+    }
+    ion-navbar {
+        position: relative;
+        padding: 1rem !important;
+        
+        ion-title {
+            text-align: center;
+
+            .toolbar-title {
+                font-size: 1.7rem;
+            }
+        }
+        ion-buttons {
+            position: absolute;
+            top: 0;
+            right: 0;
+            padding: 1.2rem;
+
+            button {
+                ion-icon {
+                    transform: scale(1.2);
+                }
+            }
+        }
+    }
+    ion-list {
+        .hn-items {
+            margin: 0;
+            padding: 0 1.5rem !important;
+            
+            &:not(:last-child) {
+                border-bottom: 1px solid #e7e9ec !important;
+            }
+
+            &.active {
+                background: #f0f2f7 !important;
+            }
+            .item-inner {
+                border: none !important;
+                padding: 0 0.5rem !important;
+
+                ion-label {
+                    display: flex;
+                    flex-flow: row nowrap;
+                    justify-content: space-between;
+                }
+                &:hover {
+                    background: transparent;
+                }
+                .hni-img img {
+                    border-radius: 50%;
+                    width: 40px;
+                    height: 40px;
+                }
+                .hni-details {
+                    word-break: break-word;
+                    white-space: normal;
+                    flex: 1;
+                    padding-left: 0.5rem;
+    
+
+                    .hnid-title {
+                        display: flex;
+                        align-items: center;
+                    }
+                    .notif-name {
+                        font-size: 1.35rem;
+                    }
+                    .notif-info {
+                        font-size: 1.6rem;
+                        font-weight: 500;
+                        margin: 0.5rem 0 0 0;
+                    }
+                    .hnid-date {
+                        font-size: 1.35rem;
+                        color: #8c8c8c !important;
+                    }
+                    .hnid-notif-time {
+                        font-size: 1.1rem;
+                        color: #adadad !important;
+                    }
+                }
+                .hni-is-active {
+                    .circle {
+                        width: 10px;
+                        height: 10px;
+                        border-radius: 50%;
+                        background: #3579ee;
+                    }
+                }
+            }
+        }
+    }
+}

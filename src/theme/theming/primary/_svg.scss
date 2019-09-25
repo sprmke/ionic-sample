@@ -1,0 +1,222 @@
+@mixin svg($p-color) {
+
+	// ------------------------------------------------
+	// Global
+
+    // ------------------------------------------------
+    // SVG Icons
+    
+	// user, profile
+	// settings, gear, customize
+	// logout, signout, back
+	.svg-user,
+	.svg-settings,
+	.svg-logout {
+		g, path, polyline, line, circle {
+			stroke: $p-color;
+		}
+	}
+
+	// view, eye
+	// report
+	// location, destination, target
+	// download
+	.svg-location,
+	.svg-view,
+	.svg-report,
+	.svg-download {
+		g, path {
+			stroke: $p-color;
+		}
+	}
+	// view, eye hover
+	.svg-view-hover:hover {
+		g, path {
+			stroke: $p-color;
+		}
+	}
+
+	// dashboard
+	// financial, bar graph
+	// levies
+	// manager info
+	.svg-dashboard,
+	.svg-financial,
+	.svg-levies {
+		g, line, rect, path {
+			stroke: $p-color;
+		}
+	}
+
+	// documents, files
+	.svg-documents {
+		g, rect, line {
+			stroke: $p-color;
+		}
+	}
+
+	// open items
+	.svg-open-items {
+		polyline, line {
+			stroke: $p-color;
+		}
+	}
+
+	// building, properties, home
+	.svg-building {
+		g, polyline, line, rect {
+			stroke: $p-color !important;
+		}
+	}
+
+	// Arrows
+	// down
+	.svg-arrow-down {
+		polyline {
+			stroke: $p-color;
+		}
+	}
+
+	// calendar, meetings
+	.svg-calendar {
+		line, rect, polyline, path, circle {
+			stroke: $p-color;
+		}
+	}
+
+	// faqs, court, laws, bylaws
+	.svg-faqs {
+		g, line, rect, polyline  {
+			stroke: $p-color;
+		}
+	}
+
+	// clock, time, date
+	.svg-clock {
+		g { stroke: $p-color; }
+		circle { stroke: $p-color; }
+	}
+
+	// chat, comment, balloon
+	.svg-chat {
+		path { stroke: $p-color; }
+	}
+
+	// repair, fix, wrench
+	// dollars, money
+	.svg-repair,
+	.svg-dollars {
+		g, path {
+			stroke: $p-color;
+		}
+	}
+
+	// pinned
+	.svg-pinned {
+		g, path  {
+			fill: $p-color;
+		}
+	}
+
+	// info, help, i
+	.svg-info {
+		overflow: visible;
+		
+		g { fill: $p-color; }
+		g, circle:nth-child(2) { stroke: $p-color; }
+	}
+
+	// thumbnail, photo, album hover
+	button:hover .svg-thumbnail {
+		circle {
+			fill: $p-color;
+		}
+	}
+
+	// payment, credit card, process
+	.svg-payment-process {
+		g, line, path {
+			stroke: $p-color;
+		}
+		polygon {
+			fill: $p-color;
+		}
+	}
+	
+	// telephone
+	.svg-telephone {
+		path { stroke: $p-color; }
+	}
+
+	// url, website
+	.svg-url {
+		g, path {
+			stroke: $p-color;
+		}
+	}
+
+	// multi-user
+	.svg-multi-user {
+		g, path, circle {
+			stroke: $p-color;
+		}
+	}
+
+	// receipt, pay receipt
+	.svg-receipt {
+		g, polygon, path {
+			stroke: $p-color;
+		}
+	}
+
+	// lot
+	.svg-lot {
+		g, polyline {
+			stroke: $p-color;
+		}
+	}
+
+	// edit, pen
+	.svg-edit {
+		polygon {
+			stroke: $p-color;
+		}
+	}
+
+	// total lots
+	.svg-total-lots {
+		g, line, circle {
+			stroke: $p-color;
+		}
+	}
+
+	// shield, insurer
+	// lock, podlock
+	.svg-shield,
+	.svg-lock {
+		g, path {
+			stroke: $p-color;
+		}
+	}
+
+	// handshake
+	.svg-handshake {
+		g, path, rect {
+			stroke: $p-color;
+		}
+	}
+
+	// moved-in, user house
+	.svg-moved-in {
+		g, circle, path {
+			stroke: $p-color;
+		}
+	}
+
+	// contact, share, airplane
+	.svg-contact {
+		g, polyline {
+			stroke: $p-color;
+		}
+	}
+}

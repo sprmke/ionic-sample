@@ -1,0 +1,258 @@
+page-levies {
+    .levy-lot {
+      width: 95%;
+    }
+    .total-info-container {
+        border-radius: 50px;
+        display: flex;
+        flex-flow: row wrap;
+    
+        app-levy-total-info:last-child .row {
+          margin-bottom: 0 !important;
+        }
+    
+        .tic-left {
+          flex: 0 0 70%;
+          max-width: 70%;
+        }
+        .tic-right {
+          flex: 0 0 30%;
+          max-width: 30%;
+        }
+    
+        .lp-pay-now {
+          color: #fff;
+          border-radius: 40px;
+          cursor: pointer;
+          font-size: 1.25rem;
+    
+          g, polygon, path, line, circle {
+            transition: stroke 0.05s ease-in-out;
+            stroke: #fff !important;
+          }
+        }
+    
+        .svg-receipt {
+                g, polygon, path {
+                    stroke: #fff;
+                }
+        }
+    }
+    @media screen and (max-width: 991px) {
+        .total-info-container {
+          flex-flow: column nowrap;
+    
+          .tic-left,
+          .tic-right {
+            width: 100%;
+            max-width: 100%;
+          }
+          .tic-left {
+            margin-bottom: 0.5rem;
+          }
+        }
+      }
+      @media screen and (max-width: 767px) {
+        .tic-left {
+          margin-bottom: 0.15rem !important;
+        }
+      }
+      .levy-balance {
+          border-radius: 40px;
+    
+          .card-body {
+            .hotdog {
+              padding: 1.25rem;
+              border-radius: 0 40px 40px 0;
+            }
+          }
+    
+          .lb-right {
+            button {
+              border-radius: 4px;
+              font-size: 1.2rem;
+              cursor: pointer;
+            }
+          }
+          .lb-center {
+            width: 100%;
+          }
+      }
+      .levy-lot {
+        .media-actions {
+          button {
+            border-radius: 4px;
+            cursor: pointer;
+          }
+        }
+        table {
+          thead, tbody {
+            tr {
+              td:nth-child(2) {
+                width: 50%;
+              }
+            }
+          }
+          thead {
+            background: transparent !important;
+            font-weight: bold;
+          }
+          tbody {
+            tr:last-child {
+              border-bottom: none !important;
+            }
+          }
+        }
+        .llf-left{
+          button {
+            border-radius: 4px;
+            cursor: pointer;
+          }
+        }
+        .llf-right {
+          h4.text-danger {
+            color: #dc3545 !important;
+          }
+        }
+      }
+    
+      .place-holder {
+          min-height: 150px;
+      }
+    
+      .place-holder-sm {
+          min-height: 21.5px;
+      }
+    
+      .financial-performance {
+          & {
+            padding-left: 52px;
+            position: relative;
+          }
+          &::before {
+            content: "";
+            width: 1px;
+            background: #41BB72;
+            height: 100%;
+            position: absolute;
+            left: 28px;
+          }
+          tr {
+            td:first-child {
+              & {
+                position: relative;
+              }
+              &::before {
+                content: url("src/assets/icons/icon-dollar.svg");
+                display: flex !important;
+                justify-content: center;
+                align-items: center;
+                position: absolute;
+                width: 32px;
+                height: 32px;
+                background: #f2f2f2;
+                border-radius: 50%;
+                text-align: center;
+                padding: 8px 0;
+                left: -40px;
+                top: 50%;
+                transform: translateY(-50%);
+              }
+            }
+          }
+        }
+        
+        .item-container {
+          max-height: 300px;
+          overflow-y: auto;    
+        }
+    
+      .pre-wrap {
+          white-space: pre-wrap;
+      }
+    
+      table {
+          tr {
+              border-bottom: 1px solid #dee2e6;
+          }
+      }
+    
+      .graph {
+          height: 220px;
+      }
+    
+      @media screen and (max-width: 767px) {
+        .levy-balance {
+          border-radius: 25px;
+          
+          .card-body {
+            display: block !important;
+    
+            .hotdog {
+              border-radius: 0;
+              padding: 0.75rem;
+            }
+          }
+        }
+        .lb-left {
+          width: 100%;
+          margin-bottom: 0.75rem;
+          border-radius: 25px 25px 0 0;
+          padding: 1rem 1.5rem;
+          justify-content: center;
+        }
+        .lb-center {
+          text-align: center;
+          float: left;
+        }
+        .lb-center,
+        .lb-right {
+          width: 50%;
+          margin-bottom: 1rem;
+        }
+        .levy-lot-footer {
+          flex-flow: column wrap;
+    
+          @media screen and (max-width: 767px) {
+            margin-top: 20px;
+          }
+    
+          .llf-left {
+            order: 2;
+          }
+          .media-actions-bottom,
+          .llf-left,
+          .llf-right {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 1rem;
+    
+            .hotdog, button {
+              width: 100%;
+              display: flex;
+            }
+          }
+          .media-actions-bottom {
+            button { width: 50%; border-radius: 4px; }
+          }
+        }
+      }
+    
+      @media screen and (max-width: 420px) {
+        .lb-center,
+        .lb-right {
+          width: 100%;
+          justify-content: center;
+        }
+        .media-actions-bottom {
+          display: block !important;
+    
+          button { 
+            width: 100% !important;
+            margin-bottom: 0.5rem;
+          }
+        }
+      }
+}

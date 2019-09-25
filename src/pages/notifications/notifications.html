@@ -1,0 +1,134 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title>Notifications</ion-title>
+    <ion-buttons end icon-right (click)="presentPopover($event)">
+      <button ion-button clear>
+        <ion-icon name="more"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content id="page-notification">
+  <ion-list class="m-0">
+    <!-- Levy Notice Due-->
+    <ion-item class="hn-items dropdown-item d-flex no-hover _card-line-bottom" (click)="presentNotificationsModal()">
+      <div class="hni-img d-flex align-items-center mr-2">
+        <img src="assets/imgs/building-background.jpeg" alt="Hornsby Building" />
+      </div>
+      <div class="hni-details flex-grow-1 pr-2">
+          <p class="hnid-title _ts-dark m-0">
+            <svg class="svg-clock mr-2" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewbox="0 0 16 16"><g class="nc-icon-wrapper" stroke-width="1" fill="#41bb72" stroke="#41bb72"><circle fill="none" stroke="#41bb72" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" cx="8.5" cy="8.5" r="7"></circle><polyline data-color="color-2" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" points=" 8.5,4.5 8.5,8.5 12.5,8.5 "></polyline></g></svg>
+            <span class="_text-primary notif-name mr-2">Levy Notice Due</span>
+          </p>
+          <p class="notif-info _ts-light">Levy #4500982 due tomorrow</p>
+          <p class="hnid-notif-time m-0 _ts-lighter small">15 min</p>
+      </div>
+    </ion-item>
+    <!-- Upcoming meeting-->
+    <ion-item class="hn-items active dropdown-item d-flex no-hover _card-line-bottom" (click)="presentNotificationsModal()">
+      <div class="hni-img d-flex align-items-center mr-2">
+        <img src="assets/imgs/building-background.jpeg" alt="Hornsby Building" />
+      </div>
+      <div class="hni-details flex-grow-1 pr-2">
+          <p class="hnid-title _ts-dark m-0">
+            <svg class="svg-calendar mr-2" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewbox="0 0 16 16"><g class="nc-icon-wrapper" stroke-width="1" fill="#41bb72" stroke="#41bb72"><line data-color="color-2" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" x1="1.5" y1="5.5" x2="15.5" y2="5.5"></line><path fill="none" stroke="#41bb72" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M14.5,2.5h-12 c-0.552,0-1,0.448-1,1v11c0,0.552,0.448,1,1,1h12c0.552,0,1-0.448,1-1v-11C15.5,2.948,15.052,2.5,14.5,2.5z"></path><line fill="none" stroke="#41bb72" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" x1="4.5" y1="0.5" x2="4.5" y2="2.5"></line><line fill="none" stroke="#41bb72" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" x1="12.5" y1="0.5" x2="12.5" y2="2.5"></line><line fill="none" stroke="#41bb72" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" x1="8.5" y1="0.5" x2="8.5" y2="2.5"></line></g></svg>
+            <span class="_text-primary notif-name mr-2">Upcoming meeting</span>
+          </p>
+          <p class="notif-info _ts-light">Annual general meeting /</p>
+          <p class="hnid-date m-0 _ts-light">Tomorrow 3:45 pm</p>
+          <p class="hnid-notif-time m-0 _ts-lighter small">2 hrs</p>
+      </div>
+      <div class="hni-is-active d-flex justify-content-center align-items-center"><span class="circle"></span></div>
+    </ion-item>
+    <!-- Levy Notice Issued-->
+    <ion-item class="hn-items active dropdown-item d-flex no-hover _card-line-bottom" (click)="presentNotificationsModal()">
+      <div class="hni-img d-flex align-items-center mr-2">
+        <img src="assets/imgs/building-background.jpeg" alt="Hornsby Building" />
+      </div>
+      <div class="hni-details flex-grow-1 pr-2">
+          <p class="hnid-title _ts-dark m-0">
+            <svg class="svg-levies mr-2" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewbox="0 0 16 16"><g class="nc-icon-wrapper" stroke-width="1" fill="#41bb72" stroke="#41bb72"><line fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" x1="6.5" y1="4.5" x2="12.5" y2="4.5" data-cap="butt" data-color="color-2"></line><line fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" x1="6.5" y1="7.5" x2="12.5" y2="7.5" data-cap="butt" data-color="color-2"></line><path fill="none" stroke="#41bb72" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M11.5,13.5v-1h-11v1 c0,1.105,0.895,2,2,2h11C12.395,15.5,11.5,14.605,11.5,13.5z" data-cap="butt"></path><path fill="none" stroke="#41bb72" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M3.5,10.5v-10h12v13 c0,1.105-0.895,2-2,2" data-cap="butt"></path></g></svg>
+            <span class="_text-primary notif-name mr-2">Levy Notice Issued</span>
+          </p>
+          <p class="notif-info _ts-light">Levy #9505768</p>
+          <p class="hnid-notif-time m-0 _ts-lighter small">3 hrs</p>
+      </div>
+      <div class="hni-is-active d-flex justify-content-center align-items-center"><span class="circle"></span></div>
+    </ion-item>
+    <!-- Manager replied to your comment -->
+    <ion-item class="hn-items dropdown-item d-flex no-hover _card-line-bottom" (click)="presentNotificationsModal()">
+      <div class="hni-img d-flex align-items-center mr-2">
+        <img src="assets/imgs/building-background.jpeg" alt="Hornsby Building" />
+      </div>
+      <div class="hni-details flex-grow-1 pr-2">
+          <p class="hnid-title _ts-dark m-0">
+            <svg class="svg-chat mr-2" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewbox="0 0 16 16"><g class="nc-icon-wrapper" stroke-width="1" fill="#41bb72" stroke="#41bb72"><path fill="none" stroke="#41bb72" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M14.5,1.5h-13 c-0.552,0-1,0.448-1,1v8c0,0.552,0.448,1,1,1h3v4l4.667-4H14.5c0.552,0,1-0.448,1-1v-8C15.5,1.948,15.052,1.5,14.5,1.5z"></path></g></svg>
+            <span class="_text-primary notif-name mr-2">Manager replied to your comment</span>
+          </p>
+          <p class="notif-info _ts-light">Claim insurance</p>
+          <p class="hnid-notif-time m-0 _ts-lighter small">5 hrs</p>
+      </div>
+    </ion-item>
+    <!-- Levy Notice Due-->
+    <ion-item class="hn-items active dropdown-item d-flex no-hover _card-line-bottom" (click)="presentNotificationsModal()">
+      <div class="hni-img d-flex align-items-center mr-2">
+        <img src="assets/imgs/building-background.jpeg" alt="Hornsby Building" />
+      </div>
+      <div class="hni-details flex-grow-1 pr-2">
+          <p class="hnid-title _ts-dark m-0">
+              <svg class="svg-clock mr-2" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewbox="0 0 16 16"><g class="nc-icon-wrapper" stroke-width="1" fill="#41bb72" stroke="#41bb72"><circle fill="none" stroke="#41bb72" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" cx="8.5" cy="8.5" r="7"></circle><polyline data-color="color-2" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" points=" 8.5,4.5 8.5,8.5 12.5,8.5 "></polyline></g></svg>
+              <span class="_text-primary notif-name mr-2">Levy Notice Due</span>
+          </p>
+          <p class="notif-info _ts-light">Levy #4500982 due tomorrow</p>
+          <p class="hnid-notif-time m-0 _ts-lighter small">15 min</p>
+      </div>
+      <div class="hni-is-active d-flex justify-content-center align-items-center"><span class="circle"></span></div>
+    </ion-item>
+    <!-- Upcoming meeting-->
+    <ion-item class="hn-items dropdown-item d-flex no-hover _card-line-bottom" (click)="presentNotificationsModal()">
+      <div class="hni-img d-flex align-items-center mr-2">
+        <img src="assets/imgs/building-background.jpeg" alt="Hornsby Building" />
+      </div>
+      <div class="hni-details flex-grow-1 pr-2">
+          <p class="hnid-title _ts-dark m-0">
+            <svg class="svg-calendar mr-2" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewbox="0 0 16 16"><g class="nc-icon-wrapper" stroke-width="1" fill="#41bb72" stroke="#41bb72"><line data-color="color-2" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" x1="1.5" y1="5.5" x2="15.5" y2="5.5"></line><path fill="none" stroke="#41bb72" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M14.5,2.5h-12 c-0.552,0-1,0.448-1,1v11c0,0.552,0.448,1,1,1h12c0.552,0,1-0.448,1-1v-11C15.5,2.948,15.052,2.5,14.5,2.5z"></path><line fill="none" stroke="#41bb72" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" x1="4.5" y1="0.5" x2="4.5" y2="2.5"></line><line fill="none" stroke="#41bb72" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" x1="12.5" y1="0.5" x2="12.5" y2="2.5"></line><line fill="none" stroke="#41bb72" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" x1="8.5" y1="0.5" x2="8.5" y2="2.5"></line></g></svg>
+            <span class="_text-primary notif-name mr-2">Upcoming meeting</span>
+          </p>
+          <p class="notif-info _ts-light">Annual general meeting /</p>
+          <p class="hnid-date m-0 _ts-light">Tomorrow 3:45 pm</p>
+          <p class="hnid-notif-time m-0 _ts-lighter small">2 hrs</p>
+      </div>
+    </ion-item>
+    <!-- Levy Notice Issued-->
+    <ion-item class="hn-items dropdown-item d-flex no-hover _card-line-bottom" (click)="presentNotificationsModal()">
+      <div class="hni-img d-flex align-items-center mr-2">
+        <img src="assets/imgs/building-background.jpeg" alt="Hornsby Building" />
+      </div>
+      <div class="hni-details flex-grow-1 pr-2">
+          <p class="hnid-title _ts-dark m-0">
+            <svg class="svg-levies mr-2" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewbox="0 0 16 16"><g class="nc-icon-wrapper" stroke-width="1" fill="#41bb72" stroke="#41bb72"><line fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" x1="6.5" y1="4.5" x2="12.5" y2="4.5" data-cap="butt" data-color="color-2"></line><line fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" x1="6.5" y1="7.5" x2="12.5" y2="7.5" data-cap="butt" data-color="color-2"></line><path fill="none" stroke="#41bb72" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M11.5,13.5v-1h-11v1 c0,1.105,0.895,2,2,2h11C12.395,15.5,11.5,14.605,11.5,13.5z" data-cap="butt"></path><path fill="none" stroke="#41bb72" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M3.5,10.5v-10h12v13 c0,1.105-0.895,2-2,2" data-cap="butt"></path></g></svg>
+            <span class="_text-primary notif-name mr-2">Levy Notice Issued</span>
+          </p>
+          <p class="notif-info _ts-light">Levy #9505768</p>
+          <p class="hnid-notif-time m-0 _ts-lighter small">3 hrs</p>
+      </div>
+      <div class="hni-is-active d-flex justify-content-center align-items-center"><span class="circle"></span></div>
+    </ion-item>
+    <!-- Manager replied to your comment -->
+    <ion-item tappable class="hn-items dropdown-item d-flex no-hover _card-line-bottom" (click)="presentNotificationsModal()">
+      <div class="hni-img d-flex align-items-center mr-2">
+        <img src="assets/imgs/building-background.jpeg" alt="Hornsby Building" />
+      </div>
+      <div class="hni-details flex-grow-1 pr-2">
+          <p class="hnid-title _ts-dark m-0">
+            <svg class="svg-chat mr-2" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewbox="0 0 16 16"><g class="nc-icon-wrapper" stroke-width="1" fill="#41bb72" stroke="#41bb72"><path fill="none" stroke="#41bb72" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M14.5,1.5h-13 c-0.552,0-1,0.448-1,1v8c0,0.552,0.448,1,1,1h3v4l4.667-4H14.5c0.552,0,1-0.448,1-1v-8C15.5,1.948,15.052,1.5,14.5,1.5z"></path></g></svg>
+            <span class="_text-primary notif-name mr-2">Manager replied to your comment</span>
+          </p>
+          <p class="notif-info _ts-light">Claim insurance</p>
+          <p class="hnid-notif-time m-0 _ts-lighter small">5 hrs</p>
+      </div>
+    </ion-item>
+  </ion-list>
+</ion-content>
+  

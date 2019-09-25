@@ -1,0 +1,72 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title>Profile</ion-title>
+    <ion-buttons end icon-right (click)="presentPopover($event)">
+      <button ion-button clear>
+        <ion-icon name="more"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <!-- Header -->
+  <div class="profile-header pt-3 pb-3">
+    <div class="profile-image">
+      <img src="/assets/imgs/avatar.png" alt="">
+    </div>
+    <div class="header-details pt-3 pb-2">
+      <h3 class="profile-name">John Smith</h3>
+      <p class="profile-address">Level 25, 88 Phillip St, Sydney NSW 2000 Australia</p>
+    </div>
+  </div>
+  <!-- Body -->
+  <div class="profile-content">
+    <div class="profile-details p-2">
+      <p>
+        <svg class="mb-2" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"><g class="nc-icon-wrapper" stroke-width="1" fill="#666666" stroke="#666666"><path fill="none" stroke="#666666" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M14.5,14.5h-13 c-0.552,0-1-0.448-1-1v-11c0-0.552,0.448-1,1-1h13c0.552,0,1,0.448,1,1v11C15.5,14.052,15.052,14.5,14.5,14.5z"/> <polyline data-color="color-2" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" points=" 2.5,4.5 8,9 13.5,4.5 "/> </g></svg>
+        johnsmith@piq.com.au
+      </p>
+      <p>
+        <svg class="mb-2" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"><g class="nc-icon-wrapper" stroke-width="1" fill="#666666" stroke="#666666"><path fill="none" stroke="#666666" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M12,10l-2,2L4,6l2-2 L3,1L1,3c0,6.627,5.373,12,12,12l2-2L12,10z" data-cap="butt"/> </g></svg>
+        +61 450 123 456
+      </p>
+    </div>
+
+     <!-- Page title -->
+    <div class="page-title-container mt-4 d-flex justify-content-between align-items-center">
+      <div class="ptc-left d-flex flex-row align-items-center">
+        <svg class="mr-2" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><g class="nc-icon-wrapper" stroke-linecap="square" stroke-linejoin="miter" stroke-width="2" fill="#ffffff" stroke="#666666"><polyline data-color="color-2" fill="none" stroke-miterlimit="10" points=" 18,6 18,1 6,1 6,9 "/> <line fill="none" stroke="#666666" stroke-miterlimit="10" x1="10" y1="23" x2="14" y2="23"/> <rect x="1" y="12" fill="none" stroke="#666666" stroke-miterlimit="10" width="9" height="11"/> <rect x="14" y="9" fill="none" stroke="#666666" stroke-miterlimit="10" width="9" height="14"/> <line fill="none" stroke="#666666" stroke-miterlimit="10" x1="18" y1="13" x2="19" y2="13"/> <line fill="none" stroke="#666666" stroke-miterlimit="10" x1="18" y1="16" x2="19" y2="16"/> <line fill="none" stroke="#666666" stroke-miterlimit="10" x1="18" y1="19" x2="19" y2="19"/> <line fill="none" stroke="#666666" stroke-miterlimit="10" x1="5" y1="19" x2="6" y2="19"/> <line fill="none" stroke="#666666" stroke-miterlimit="10" x1="5" y1="16" x2="6" y2="16"/></g></svg>
+        <p>My Properties</p>
+      </div>
+      <!-- <button ion-button round>Show all</button> -->
+    </div>
+
+    <ion-scroll scrollX="true" direction="x">
+        <app-profile-property-gallery></app-profile-property-gallery>
+    </ion-scroll>
+
+    <!-- Page title -->
+    <div class="page-title-container mt-3 d-flex justify-content-between align-items-center">
+      <div class="ptc-left d-flex flex-row align-items-center">
+        <svg _ngcontent-c5="" class="mr-2" height="24" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><title _ngcontent-c5="">Recent posts</title><g _ngcontent-c5="" class="nc-icon-wrapper" fill="#666666" stroke="#666666" stroke-linecap="square" stroke-linejoin="miter" stroke-width="2"><rect _ngcontent-c5="" fill="none" height="20" stroke="#666666" stroke-miterlimit="10" width="22" x="1" y="2"></rect><line _ngcontent-c5="" fill="none" stroke="#666666" stroke-miterlimit="10" x1="1" x2="23" y1="6" y2="6"></line><rect _ngcontent-c5="" data-color="color-2" fill="none" height="6" stroke-miterlimit="10" width="6" x="5" y="11"></rect><line _ngcontent-c5="" data-color="color-2" fill="none" stroke-miterlimit="10" x1="15" x2="19" y1="11" y2="11"></line><line _ngcontent-c5="" data-color="color-2" fill="none" stroke-miterlimit="10" x1="15" x2="17" y1="15" y2="15"></line><line _ngcontent-c5="" fill="none" stroke="#666666" stroke-miterlimit="10" x1="6" x2="6" y1="2" y2="6"></line></g></svg>
+        <p>Recent Updates</p>
+      </div>
+      <!-- <button ion-button round>Show all</button> -->
+    </div>
+
+    <div class="recent-updates">
+      <!-- Card layout (Repair) -->
+      <app-card-repair [postType]="'pinned'"></app-card-repair>
+    
+      <!-- Card layout (Levies) -->
+      <app-card-levies [postType]="'pinned'"></app-card-levies>
+    
+      <!-- Card layout (Manager post) -->
+      <app-card-manager-post [postType]="'pinned'"></app-card-manager-post>
+    
+      <!-- Card layout (Payment IP) -->
+      <app-card-payment [postType]="'pinned'"></app-card-payment>
+    </div>
+  </div>
+</ion-content>

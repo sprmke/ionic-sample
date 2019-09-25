@@ -1,0 +1,149 @@
+page-financial {
+    ion-content {
+        button:not(.button-outline) {
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2) !important;
+            
+            svg {
+                transform: scale(0.75);
+            }
+            p, span {
+                text-transform: capitalize;
+                font-size: 1.4rem !important;
+            }
+        }
+    }
+    .financial-cards {
+        p {
+            font-size: 1.55rem !important;
+        }
+    }
+      .financial-performance {
+        & {
+          padding-left: 52px;
+          position: relative;
+        }
+        &::before {
+          content: "";
+          width: 1px;
+          background: #41BB72;
+          height: 100%;
+          position: absolute;
+          left: 28px;
+        }
+        tr {
+          td:first-child {
+            & {
+              position: relative;
+            }
+            &::before {
+              content: url("../../assets/icon/icon-dollar.svg");
+              position: absolute;
+              width: 32px;
+              height: 32px;
+              background: #f2f2f2;
+              border-radius: 50%;
+              text-align: center;
+              padding: 8px 0;
+              left: -40px;
+              top: 50%;
+              transform: translateY(-50%);
+            }
+          }
+        }
+      }
+      @media screen and (max-width: 767px) {
+        .performance-container {
+          .hotdog {
+            margin-bottom: 1rem;
+          }
+        }
+      }
+      .financial-card-actions {
+        button {
+          border-radius: 4px;
+          cursor: pointer;
+        }
+      }
+      .hotdog-sm {
+        padding: 0.5rem;
+      }
+      @media only screen 
+      and (min-width : 768px) 
+      and (max-width : 1024px)
+      and (orientation : portrait) { 
+        .performance-container {
+          min-height: 339px;
+        }
+      }
+      @media only screen 
+      and (min-width : 768px) 
+      and (max-width : 1024px)
+      and (orientation : landscape) { 
+        .performance-container {
+          min-height: 446px;
+        }
+      }
+      @media only screen 
+      and (min-width : 1025px)  { 
+        .performance-container {
+          min-height: 437px;
+        }
+      }
+      .financial-summary {
+        display: block !important;
+    }
+    .financial-summary .col > .card {
+        border: none !important;
+    }
+    .is-loading {
+        min-height: 10px;
+    }
+    .border-none {
+        border: none;
+    }
+    .financial-card-actions {
+        button {
+            & {
+                position: relative;
+            }
+            .dropdown {
+                position: absolute;
+                top: -5px;
+                left: -40%;
+                transform: translateY(-100%);
+                z-index: 100;
+                background: white;
+                width: 140%;
+                padding: 8px 10px;
+                border: 1px solid #ddd;
+                outline: 1px solid #eee;
+                text-align: left;
+                display: none;
+                .form-check-label {
+                    z-index: 101;
+                    margin-left: -20px;
+                    padding-left: 20px;
+                }
+                .form-check-input {
+                    z-index: -1;
+                }
+                .form-check {
+                    &:hover {
+                        font-weight: bolder;
+                    }
+                }
+            }
+            .showMenu {
+                display: block;
+            }
+            &:hover {
+                .dropdown {
+                    color: black;
+                }
+            }
+        }
+    }
+    .performance-container {
+        min-height: 40vh;
+    }
+}

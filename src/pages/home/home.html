@@ -1,0 +1,40 @@
+<app-navbar [activePage]="'Home'"></app-navbar>
+
+<ion-content>
+	<!-- Header -->
+	<div class="blue-header"></div>
+	<ion-card class="header-building-container" tappable (click)="goToBuildingPage()">
+		<div class="card-image"><img src="assets/imgs/building-background.jpeg"></div>
+		<ion-card-content>
+				<ion-card-title>Artarmon Building</ion-card-title>
+				<p>118 Artarmon Rd. Artarmon NSW. 2064</p>
+		</ion-card-content>
+	</ion-card>
+	<!-- Body -->
+	<div class="main-content">
+		<div class="segment-container">
+			<ion-segment [(ngModel)]="homeSegment">
+				<ion-segment-button class="btn" value="newsfeed">
+					<span class="button-inner">Newsfeed</span>
+				</ion-segment-button>
+				<ion-segment-button class="btn" value="financial">
+					<span class="button-inner">Financial</span>
+				</ion-segment-button>
+				<ion-segment-button class="btn" value="strata">
+					<span class="button-inner">Strata</span>
+				</ion-segment-button>
+			</ion-segment>
+		</div>
+		<div class="segment-content" [ngSwitch]="homeSegment">
+			<div class="newsfeed-segment" *ngSwitchCase="'newsfeed'">
+				<app-newsfeed></app-newsfeed>
+			</div>
+			<div class="newsfeed-segment" *ngSwitchCase="'financial'">
+				<app-financial></app-financial>
+			</div>
+			<div class="newsfeed-segment" *ngSwitchCase="'strata'">
+				<app-strata></app-strata>
+			</div>
+		</div>
+	</div>
+</ion-content>

@@ -1,0 +1,52 @@
+<app-navbar [activePage]="'Open Items'"></app-navbar>
+
+<ion-content>
+    <ion-fab right bottom>
+        <button ion-fab color="primary" (click)="presentOpenItemsModal()">
+            <ion-icon name="add"></ion-icon>
+        </button>
+    </ion-fab>
+
+    <ion-card class="mt-4" padding>
+        <div class="media">
+            <div class="image mr-3 _border-primary-2">
+                <svg class="svg-financial" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24"><title>Repairs summary</title><g class="nc-icon-wrapper" stroke-linecap="square" stroke-linejoin="miter" stroke-width="2" fill="#41bb72" stroke="#41bb72"><rect data-color="color-2" x="10" y="3" fill="none" stroke-miterlimit="10" width="4" height="18"></rect><rect x="1" y="14" fill="none" stroke="#41bb72" stroke-miterlimit="10" width="4" height="7"></rect><rect x="19" y="9" fill="none" stroke="#41bb72" stroke-miterlimit="10" width="4" height="12"></rect></g></svg>
+            </div>
+            <div class="media-body">
+                <h6 class="mt-0 _text-primary mb-0"><strong>Repairs Summary</strong></h6>
+                <p class="_ts-lighter">2018</p>
+            </div>
+        </div>
+        <table class="table mt-2 w-100">
+            <tr class="_card-line-bottom">
+                <td class="border-top-0 _ts-default _bg-shade-pseudo-before">Requests</td>
+                <td class="border-top-0 _text-primary text-right">8</td>
+            </tr>
+            <tr class="_card-line-bottom">
+                <td class="_ts-default _bg-shade-pseudo-before">Quotes in progress</td>
+                <td class="_text-primary text-right">3</td>
+            </tr>
+            <tr class="_card-line-bottom">
+                <td class="_ts-default _bg-shade-pseudo-before">Work in progress</td>
+                <td class="_text-primary text-right">4</td>
+            </tr>
+            <tr class="">
+                <td class="_ts-default _bg-shade-pseudo-before">Payments in progress</td>
+                <td class="_text-primary text-right">5</td>
+            </tr>
+        </table>
+    </ion-card>
+
+    <ion-card class="oi-search-container">
+        <div class="d-flex justify-content-center align-items-center my-1">
+            <ion-searchbar></ion-searchbar>
+        </div>
+        <div class="d-flex flex-column">
+            <app-card-repair [postType]="'recent'"></app-card-repair>
+            <app-card-repair [postType]="'recent'"></app-card-repair>
+            <app-card-repair [postType]="'recent'"></app-card-repair>
+        </div>
+    </ion-card>
+    
+
+</ion-content>

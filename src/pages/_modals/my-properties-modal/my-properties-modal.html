@@ -1,0 +1,52 @@
+<ion-header>
+  <ion-navbar color="primary" class="page-modal">
+    <ion-row>
+      <ion-title>
+        Change property
+        <ion-buttons end>
+          <button padding ion-button (click)="dismissModal()">
+            <ion-icon name="close"></ion-icon>
+          </button>
+        </ion-buttons>
+      </ion-title>
+    </ion-row>
+    <ion-row class="mt-1">
+        <ion-searchbar></ion-searchbar>
+    </ion-row>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content class="page-modal">
+    <ion-list no-lines>
+      <ion-item tappable (click)="dismissModal()" class="active">
+        <ion-avatar item-start>
+          <img src="http://localhost:8100/assets/imgs/building-background.jpeg">
+        </ion-avatar>
+        <h2>Artarmon Building</h2>
+        <p>118 Artarmon Rd. Artarmon NSW. 2064</p>
+      </ion-item>
+      <ion-item tappable (click)="dismissModal()">
+        <ion-avatar item-start>
+          <img src="http://localhost:8100/assets/imgs/building-background.jpeg">
+        </ion-avatar>
+        <h2>St Leonards Residence</h2>
+        <p>J3 Westbourne St. St Leonards NSW. 2065</p>
+      </ion-item>
+      <ion-item tappable (click)="dismissModal()">
+        <ion-avatar item-start>
+          <img src="http://localhost:8100/assets/imgs/building-background.jpeg">
+        </ion-avatar>
+        <h2>Hornsby Building</h2>
+        <p>Jersey Lane, Hornsby NSW. 2077</p>
+      </ion-item>
+      <ion-item tappable (click)="dismissModal()">
+        <ion-avatar item-start>
+          <img src="http://localhost:8100/assets/imgs/building-background.jpeg">
+        </ion-avatar>
+        <h2>Newtown Complex</h2>
+        <p>32-72 Alice St. Newtown NSW. 2042</p>
+      </ion-item>
+    </ion-list>
+</ion-content>
+
